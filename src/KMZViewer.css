@@ -1,0 +1,94 @@
+/* General Page Styling */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 300px;
+  background: #3a7880;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  border-top-left-radius: 1%;
+}
+
+.sidebar.hidden {
+  transform: translateX(-100%);
+}
+
+.sidebar h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.file-upload label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.file-upload input {
+  margin-bottom: 15px;
+}
+
+.layer-toggle {
+  margin: 10px 0;
+}
+
+.layer-toggle label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.layer-toggle input {
+  margin-right: 10px;
+}
+
+/* Map Container Styling */
+.leaflet-container {
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hamburger Icon */
+.hamburger-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.hamburger-icon div {
+  width: 100%;
+  height: 4px;
+  background: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Animation for Hamburger Icon */
+.hamburger-icon:hover div {
+  background: #0066ff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 70%;
+  }
+}
